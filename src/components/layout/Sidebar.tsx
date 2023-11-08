@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar: React.FC = () => {
   const menus = [
@@ -17,18 +17,18 @@ const Sidebar: React.FC = () => {
     ];
 
   return (
-    <aside className="sidebar">
-        <Link to="/">Home</Link>
-        <Link to="/Narrative">Narrative</Link>
-        <Link to="/Descriptive">Descriptive</Link>
-        <Link to="/Informative">Informative</Link>
-        <Link to="/Persuasive">Persuasive</Link>
-        <Link to="/Procedural">Procedural</Link>
-        <Link to="/Opinion">Opinion</Link>
-        <Link to="/Literature">Literature</Link>
-        <Link to="/Creative">Creative</Link>
-        <Link to="/Journal">Journal</Link>
-        <Link to="/Letter">Letter</Link>
+    <aside className="sidebar">          
+      <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
+      <NavLink to="/Narrative" className={({ isActive }) => isActive ? "active" : ""}>Narrative</NavLink>
+      <NavLink to="/Descriptive" className={({ isActive }) => isActive ? "active" : ""}>Descriptive</NavLink>
+      <NavLink to="/Informative" className={({ isActive }) => isActive ? "active" : ""}>Informative</NavLink>
+      <NavLink to="/Persuasive" className={({ isActive }) => isActive ? "active" : ""}>Persuasive</NavLink>
+      <NavLink to="/Procedural" className={({ isActive }) => isActive ? "active" : ""}>Procedural</NavLink>
+      <NavLink to="/Opinion" className={({ isActive }) => isActive ? "active" : ""}>Opinion</NavLink>
+      <NavLink to="/Literature" className={({ isActive }) => isActive ? "active" : ""}>Literature</NavLink>
+      <NavLink to="/Creative" className={({ isActive }) => isActive ? "active" : ""}>Creative</NavLink>
+      <NavLink to="/Journal" className={({ isActive }) => isActive ? "active" : ""}>Journal</NavLink>
+      <NavLink to="/Letter" className={({ isActive }) => isActive ? "active" : ""}>Letter</NavLink>
     </aside>
   );
 };

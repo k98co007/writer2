@@ -19,7 +19,14 @@
   background-color: #0515fa;
 }
 
+.active {
+  background-color: #4CAF50; /* or any highlight color you like */
+  color: white;
+}
+
 .sidebar {
+  display: flex;
+  flex-direction: column;
   width: 100px;
   padding: 20px;
   background-color: #ff0000;
@@ -35,4 +42,61 @@
   position: relative;
   overflow: auto;
   background-color: #fa05d1;
+}
+
+.Narrative{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: #45ff56;
+}
+
+.SubHeader{
+  display: flex;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+  background-color: #123456;
+}
+
+.SubContent{
+  display: flex;
+  flex: 1;
+  position: relative;
+  overflow: auto;
+  background-color: #654321;
+}
+
+.Sample{
+  width: 50%;
+  background-color: #126543;
+}
+
+.Write{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #ff5555;
+}
+
+.CharacterCounter{
+  width: 100%;
+  text-align: end;
+}
+
+.Title{
+  height: 24px;
+}
+
+.Summary{
+  height: 48px;
+}
+
+.Draft{
+  height: 100px;
+}
+
+.Final{
+  height: 200px;
 }
