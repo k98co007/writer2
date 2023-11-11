@@ -2,38 +2,74 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #0000ff;
+
 }
 
 .header {
-  font-size: 24px;
-  text-align: center;
-  padding: 20px;
-  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+}
+
+.headerSlogan{
+  display: flex;
+  flex-direction: row;
+  
+  
+}
+
+.headerPicture{
+  display: flex;
+  padding-right: 20px;
 }
 
 .MainContent{
   display: flex;
   flex-direction: row;
   flex: 1;
-  background-color: #0515fa;
-}
-
-.active {
-  background-color: #4CAF50; /* or any highlight color you like */
-  color: white;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 100px;
-  padding: 20px;
-  background-color: #ff0000;
-
+  width: 150px;
   position: relative;
   overflow-y: auto;
   overflow: auto;
+}
+
+.black-nav {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.nav-link {
+  color: black;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  border-style:solid;
+  border-color:black;  
+  border-width: 1px;
+  border-radius: 4px;
+  
+  margin: 5px;
+  text-decoration: none;
+}
+
+.nav-link:hover{
+  color: white;
+  border-color:rgb(245, 102, 7);
+  background-color: rgb(245, 102, 7);
+  box-shadow: 3px 3px gray;
+}
+
+.nav-linka { 
+  color: rgb(245, 102, 7);;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 800;
+  text-decoration: none
 }
 
 .content-area {
@@ -41,22 +77,21 @@
   flex: 1;
   position: relative;
   overflow: auto;
-  background-color: #fa05d1;
 }
 
 .Narrative{
   display: flex;
   width: 100%;
   flex-direction: column;
-  background-color: #45ff56;
 }
 
 .SubHeader{
   display: flex;
-  font-size: 24px;
-  text-align: center;
-  padding: 20px;
-  background-color: #123456;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  padding-left: 40px;
 }
 
 .SubContent{
@@ -64,12 +99,20 @@
   flex: 1;
   position: relative;
   overflow: auto;
-  background-color: #654321;
 }
 
 .Sample{
   width: 50%;
-  background-color: #126543;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px;
+  border-style:solid;
+  border-color:black;  
+  border-width: 1px;
+  border-radius: 8px;
+  background-color: rgb(240, 235, 235);
+  box-shadow: 3px 3px gray;
 }
 
 .Write{
@@ -77,7 +120,13 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background-color: #ff5555;
+  margin: 10px;
+  border-style:solid;
+  border-color:black;  
+  border-width: 1px;
+  border-radius: 8px;
+  background-color: rgb(250, 245, 245);
+  box-shadow: 3px 3px gray;
 }
 
 .CharacterCounter{
@@ -85,18 +134,26 @@
   text-align: end;
 }
 
-.Title{
+.Title1line{
   height: 24px;
+  resize: none;
+  border-radius: 4px;
 }
 
 .Summary{
   height: 48px;
+  resize: none;
+  border-radius: 4px;
 }
 
 .Draft{
   height: 100px;
+  resize: none;
+  border-radius: 4px;
 }
 
 .Final{
   height: 200px;
+  resize: none;
+  border-radius: 4px;
 }

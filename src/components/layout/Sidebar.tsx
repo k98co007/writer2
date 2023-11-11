@@ -17,18 +17,20 @@ const Sidebar: React.FC = () => {
     ];
 
   return (
-    <aside className="sidebar">          
-      <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
-      <NavLink to="/Narrative" className={({ isActive }) => isActive ? "active" : ""}>Narrative</NavLink>
-      <NavLink to="/Descriptive" className={({ isActive }) => isActive ? "active" : ""}>Descriptive</NavLink>
-      <NavLink to="/Informative" className={({ isActive }) => isActive ? "active" : ""}>Informative</NavLink>
-      <NavLink to="/Persuasive" className={({ isActive }) => isActive ? "active" : ""}>Persuasive</NavLink>
-      <NavLink to="/Procedural" className={({ isActive }) => isActive ? "active" : ""}>Procedural</NavLink>
-      <NavLink to="/Opinion" className={({ isActive }) => isActive ? "active" : ""}>Opinion</NavLink>
-      <NavLink to="/Literature" className={({ isActive }) => isActive ? "active" : ""}>Literature</NavLink>
-      <NavLink to="/Creative" className={({ isActive }) => isActive ? "active" : ""}>Creative</NavLink>
-      <NavLink to="/Journal" className={({ isActive }) => isActive ? "active" : ""}>Journal</NavLink>
-      <NavLink to="/Letter" className={({ isActive }) => isActive ? "active" : ""}>Letter</NavLink>
+    <aside className="sidebar">        
+      <nav className='black-nav'>
+      <NavLink to="/" className={({isActive}) => "nav-link" + (isActive? "a" : "")}>Home</NavLink>
+      <NavLink to="/Narrative" className={({isActive}) => "nav-link" + (isActive? "a" : "")}>Narrative</NavLink>
+      <NavLink to="/Descriptive" className={({isActive}) => "nav-link" + (isActive? "a" : "")}>Descriptive</NavLink>
+      <NavLink to="/Informative" className={({isActive}) => "nav-link" + (isActive? "a" : "")}>Informative</NavLink>
+      <NavLink to="/Persuasive" className={({isActive}) => "nav-link" + (isActive? "a" : "")}>Persuasive</NavLink>
+      <NavLink to="/Procedural" className={({isActive}) => "nav-link" + (isActive? "a" : "")}>Procedural</NavLink>
+      <NavLink to="/Opinion" className={({isActive}) => "nav-link" + (isActive? "a" : "")}>Opinion</NavLink>
+      <NavLink to="/Literature" className={({isActive}) => "nav-link" + (isActive? "a" : "")}>Literature</NavLink>
+      <NavLink to="/Creative" className={({isActive}) => "nav-link" + (isActive? "a" : "")}>Creative</NavLink>
+      <NavLink to="/Journal" className={({isActive}) => "nav-link" + (isActive? "a" : "")}>Journal</NavLink>
+      <NavLink to="/Letter" className={({isActive}) => "nav-link" + (isActive? "a" : "")}>Letter</NavLink>
+      </nav>  
     </aside>
   );
 };

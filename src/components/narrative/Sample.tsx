@@ -6,7 +6,7 @@ const Sample: React.FC = () => {
     const [draft, setDraft] = useState('');
     const [final, setFinal] = useState('');
   
-    const handleTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleTitleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
       setTitle(event.target.value);
     };
   
@@ -23,12 +23,11 @@ const Sample: React.FC = () => {
       };
     
     return (
-      <div className='Write'>
-
+      <div className='Sample'>
+          <b>Other's Sample</b><br/>
           <label>Title</label>
-          <input className='Title'
+          <textarea className='Title1line'
             disabled
-            type="text"
             value={title}
             onChange={handleTitleChange}
             maxLength={40}
