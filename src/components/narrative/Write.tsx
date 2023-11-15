@@ -17,7 +17,8 @@ const Write: React.FC = () => {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setTimeLeft((prevTime) => prevTime - INTERVAL);
+          const len = title.length + summary.length + draft.length + final.length;
+          setTimeLeft((prevTime) => prevTime - (len > 0?INTERVAL:0));
         }, INTERVAL);
 
         if (timeLeft <= 0) {
@@ -28,7 +29,7 @@ const Write: React.FC = () => {
         return () => {
             clearInterval(timer);
         };
-    }, [timeLeft]);
+    }, [timeLeft,title,summary,draft,final]);
 
     const [titleLenColor, setTitleLenColor] = useState({ color: "black" });
     const [summaryLenColor, setSummaryLenColor] = useState({ color: "black" });

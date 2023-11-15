@@ -16,7 +16,7 @@ const InitialEvaluationWriting: React.FC = () => {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setTimeLeft((prevTime) => prevTime - INTERVAL);
+          setTimeLeft((prevTime) => prevTime - (final.length > 0?INTERVAL:0));    
         }, INTERVAL);
 
         if (timeLeft <= 0) {
@@ -27,7 +27,7 @@ const InitialEvaluationWriting: React.FC = () => {
         return () => {
             clearInterval(timer);
         };
-    }, [timeLeft]);
+    }, [timeLeft, final]);
 
   
     const handleFinalChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
