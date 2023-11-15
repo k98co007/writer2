@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-
+  background: url(background_1024x576.png);
+  background-size: cover;
 }
 
 .header {
@@ -13,9 +14,9 @@
 
 .headerSlogan{
   display: flex;
+  flex-grow: 1;
   flex-direction: row;
-  
-  
+  margin-left: 200px;
 }
 
 .headerPicture{
@@ -65,7 +66,7 @@
 }
 
 .nav-linka { 
-  color: rgb(245, 102, 7);;
+  color: rgb(245, 102, 7);
   padding: 20px;
   font-size: 20px;
   font-weight: 800;
@@ -77,6 +78,89 @@
   flex: 1;
   position: relative;
   overflow: auto;
+}
+
+.btnWriteNow{
+  color: white;
+  background-color: black;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 650px;
+  flex: none;
+}
+
+.btnWriteNow:hover{
+  background-color: rgb(245, 102, 7);
+  box-shadow: 3px 3px gray;
+}
+
+.Home{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.InitialEvaluationWrite{
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;    
+  margin: auto;
+  border-style:solid;
+  border-color:black;  
+  border-width: 1px;
+  border-radius: 8px;
+  background-color: rgb(250, 245, 245);
+  box-shadow: 3px 3px gray;
+}
+
+.timeDisplay{
+  color: rgb(245, 102, 7);
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.Signature{
+  height: 24px;
+  resize: none;
+  border-radius: 4px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.SecretKeyword{
+  height: 24px;
+  resize: none;
+  border-radius: 4px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.btnSubmit{
+  color: white;
+  background-color: black;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  height: 32px;
+  width: 30%;
+  border-radius: 4px;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+
+.btnSubmit:hover{
+  background-color: rgb(245, 102, 7);
+  box-shadow: 3px 3px gray;
 }
 
 .Narrative{
@@ -115,6 +199,27 @@
   box-shadow: 3px 3px gray;
 }
 
+.SampleHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.WriteHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.WriteTimeDisplay{
+  color: rgb(245, 102, 7);;
+  font-size: 16px;
+  font-weight: 800;
+  width: 110px;
+}
+
 .Write{
   width: 50%;
   display: flex;
@@ -135,6 +240,8 @@
 }
 
 .Title1line{
+  font-size: 16px;
+  font-weight: 600;
   height: 24px;
   resize: none;
   border-radius: 4px;
@@ -144,16 +251,22 @@
   height: 48px;
   resize: none;
   border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .Draft{
   height: 100px;
   resize: none;
   border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .Final{
   height: 200px;
   resize: none;
   border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
 }

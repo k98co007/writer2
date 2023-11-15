@@ -22,9 +22,39 @@ const Sample: React.FC = () => {
         setFinal(event.target.value);
       };
     
+      const handleReadClick = () => {
+        fetch('http://localhost:3001/read')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log('title:', data.title);
+            console.log('summary:', data.summary);
+            console.log('draft:', data.draft);
+            console.log('final:', data.final);
+            
+            setTitle(data.title);
+            setSummary(data.summary);
+            setDraft(data.draft);
+  
+            if( data.final != null)
+              setFinal(data.final);
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+      };
+      
     return (
       <div className='Sample'>
-          <b>Other's Sample</b><br/>
+          <div className='SampleHeader'>
+          <b>Other's Sample</b>          
+          <b onClick={handleReadClick}>Next &gt;&gt;</b>
+          </div>
+          
           <label>Title</label>
           <textarea className='Title1line'
             disabled
